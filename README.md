@@ -27,14 +27,14 @@ _Hinweis:_ Die volle LaTeX Software ist um die 5GB groß, also nicht wundern, we
 
 ```sh
 # md to pdf
-docker run --rm -it -v ${PWD}:/data pandoc pandoc [markdown-file].md -o [output-file].pdf
+docker run --rm -it -v '$PWD':/data pandoc pandoc [markdown-file].md -o [output-file].pdf
 
 # md to pdf + bibtex
-docker run --rm -it -v ${PWD}:/data pandoc pandoc [markdown-file].md -o [output-file].pdf --bibliography [bibtex-file].bib
+docker run --rm -it -v '$PWD':/data pandoc pandoc [markdown-file].md -o [output-file].pdf --bibliography [bibtex-file].bib
 
 # md to latex
-docker run --rm -it -v ${PWD}:/data pandoc pandoc [markdown-file].md -o [output-file].tex
+docker run --rm -it -v '$PWD':/data pandoc pandoc [markdown-file].md -o [output-file].tex
 
 # latex to pdf
-docker run --rm -it -v ${PWD}:/data pandoc pdflatex [latex-file].tex
+docker run --rm -it -v '$PWD':/data pandoc pdflatex [latex-file].tex
 ```
